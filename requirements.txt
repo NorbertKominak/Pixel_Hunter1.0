@@ -12,3 +12,4 @@ hydra-core
 scikit-learn
 albumentations
 omegaconf
+-e git+https://github.com/GantMan/nsfw_model#egg=nsfw_detector

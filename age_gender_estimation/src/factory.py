@@ -1,3 +1,7 @@
+# Disabling Tensor Flow warnings
+from os import environ
+environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+
 from tensorflow.keras import applications
 from tensorflow.keras.optimizers import SGD, Adam
 from tensorflow.keras.models import Model

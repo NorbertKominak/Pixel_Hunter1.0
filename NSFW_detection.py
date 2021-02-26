@@ -1,4 +1,4 @@
-from nsfw_detector import predict
+from src.nsfw_detector.nsfw_detector import predict
 
 
 def run(img_path):
