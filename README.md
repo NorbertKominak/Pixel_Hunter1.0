@@ -4,7 +4,7 @@ Image analysis using combination of pre-trained neural networks.
 
 ## Instalation
 
-1. Download pre-trained models [here](https://drive.google.com/file/d/11JanOzoZGJ7mxJwY-mGSw1sf8rSgMBBj/view?usp=sharing)
+1. Download pre-trained models [here](https://drive.google.com/file/d/11JanOzoZGJ7mxJwY-mGSw1sf8rSgMBBj/view)
 . Extract them into bakloska folder.
 2. Install requirements. Age_gender folder is preinstalled due to its lack of setup.py.
 ```bash
