@@ -24,7 +24,7 @@ python main.py --image_path dir
 python main.py
 ```  
 To disable TensorFlow warnings add this at the beginning of predict.py file which should
-be located at src/nsfw_detector/nsfw_detector/
+be located at src/nsfw_detector/nsfw_detector/ or venv/src/nsfw_detector/nsfw_detector
 ```python
 # Disabling Tensor Flow warnings
 from os import environ
