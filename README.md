@@ -8,6 +8,7 @@ Image analysis using combination of pre-trained neural networks.
 . Extract them into bakloska folder.
 2. Install requirements. Age_gender folder is preinstalled due to its lack of setup.py.
 ```bash
+pip install cmake
 pip install -r requirements.txt
 ```
 
