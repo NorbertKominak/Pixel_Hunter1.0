@@ -6,7 +6,11 @@ Image analysis using combination of pre-trained neural networks.
 
 1. Download pre-trained models [here](https://drive.google.com/file/d/11JanOzoZGJ7mxJwY-mGSw1sf8rSgMBBj/view)
 . Extract them into bakloska folder.
-2. Install requirements. Age_gender folder is preinstalled due to its lack of setup.py.
+2. Create virtual environment 
+```bash
+python -m venv path_to_bakloska\venv
+```
+3. Install requirements. Age_gender folder is preinstalled due to its lack of setup.py.
 ```bash
 pip install cmake
 pip install -r requirements.txt
@@ -24,7 +28,7 @@ python main.py --image_path dir
 python main.py
 ```  
 To disable TensorFlow warnings add this at the beginning of predict.py file which should
-be located at src/nsfw_detector/nsfw_detector/
+be located at src/nsfw_detector/nsfw_detector/ or venv/src/nsfw_detector/nsfw_detector
 ```python
 # Disabling Tensor Flow warnings
 from os import environ
