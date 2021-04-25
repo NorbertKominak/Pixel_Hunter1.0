@@ -1,1 +1,0 @@
-pip install -e git+https://github.com/GantMan/nsfw_model#egg=nsfw-detector na NSFW detector
