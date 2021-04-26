@@ -1,7 +1,7 @@
 """Scene Description Model
 
 This module provides functionality to run inference of the
-Scene Description model using the run() function.
+Scene Description Model using the run() function.
 
 This module contains following functions:
 
