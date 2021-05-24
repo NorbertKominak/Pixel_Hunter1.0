@@ -1,7 +1,9 @@
 .idea/
 venv/
-models/
-img/*
+models/*
+img/sample
+img/tmp
 results/*
 __pycache__/
 */__pycache__/
+comparison_data/

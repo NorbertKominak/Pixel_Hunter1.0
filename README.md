@@ -1,14 +1,20 @@
 # Bakloska
 
-Image analysis using combination of pre-trained neural networks.
+Image analysis using combination of freely available pre-trained neural networks with Google Cloud Vision, Amazon Rekognition and Microsoft Computer Vision APIs. 
 
-## Instalation
+Input images are loaded from the directory specified by --input_dir argument. All outputs are stored in the directory specified by --output_dir.Whether APIs are allowed to run or not is defined by --allow_api argument. Only selected images are sent for further analysis to APIs. The selection is determined by each neural network`s outputs.
 
-1. Download pre-trained models [here](https://drive.google.com/file/d/1DYClIXxllr7h2veVj5Pmg9pXaPopIM-n/view?usp=sharing)
+## Installation
+
+Python 3.7 or higher is required.
+
+1. Download pre-trained models [here](https://drive.google.com/file/d/1DVcpRyNnuh-dS7y3gqniy0od9NZmkvy0/view?usp=sharing)
 . Extract them into bakloska folder.
-2. Create virtual environment 
+2. Create virtual environment (Windows)
 ```bash
 python -m venv path_to_bakloska\venv
+path_to_bakloska\venv\Scripts\activate
+
 ```
 3. Install requirements.
 ```bash
@@ -16,25 +22,44 @@ pip install cmake
 pip install -r requirements.txt
 ```
 
+In case dlib installation seems to be frozen, try to install it separately with verbose flags, to see whether it is really frozen. It may take a couple of minutes.
+```bash
+pip install dlib -vvv 
+```
+
+## Set up APIs Credentials
+To get APIs running you need to give them your credentials. Manuals to obtain credentials:\
+[Microsof Computer Vision](https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/quickstarts-sdk/image-analysis-client-library?tabs=visual-studio&pivots=programming-language-python)\
+[Google Cloud Vision](https://cloud.google.com/vision/docs/setup?authuser=0#windows)\
+[Amazon Rekognition](https://docs.aws.amazon.com/rekognition/latest/dg/getting-started.html)
+
+Put Microsoft\`s credentials at the top of (line 32) `msvision.py` file
+```python
+SUBSCRIPTION_KEY = "your_key"
+ENDPOINT = "your_endpoint"
+```
+
+For Google\`s API, download the JSON file with yours service account key token and set os environment variable on the top of (line 29) `ggvision.py` file
+```python
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "path_to_the_json_token"
+```
+
+In case of the Amazon Rekognition, the easiest way is to download [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html) and [configure](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html) it via command prompt. No changes with `awsvision.py` file are required.
+
+You can still run the Image Analyzer(`run.py`) without APIs\` credentials with `--allow_api=False` (it is False by default). 
+
 ## Usage
 ```bash
-# a single image with visualization
-python main.py --image_path img/image.jpg --visualize True
+# run analysis with APIs on images in my_dir and store all results
+# to out_dir
+python run.py --input_dir=my_dir --output_dir=out_dir --allow_api=True
 
-# all images in dir without visualization
-python main.py --image_path dir
-
-# all images in img folder
-python main.py
-```  
-To disable TensorFlow warnings add this at the beginning of predict.py file which should
-be located at src/nsfw_detector/nsfw_detector/ or venv/src/nsfw_detector/nsfw_detector
-```python
-# Disabling Tensor Flow warnings
-from os import environ
-environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+# run analysis without APIs on images in img and store all results
+# to outputs
+python run.py
 ```  
 
+Unfortunately warnings with regards to custom gradient could not be silenced. At the moment, the only workaround how to avoid them is to install less stable TensorFlow version `pip install tf-nightly` instead of `tensorflow`. It should be fixed in the future tf 2.5.0 stable release :).
 
 ## Sources
 [NSFW model](https://github.com/GantMan/nsfw_model)  

@@ -1,0 +1,32 @@
+img_name,label_name,score,left,top,right,bottom
+000000001730.jpg,person,0.98,296,79,558,412
+000000001730.jpg,person,0.95,92,133,290,455
+000000001730.jpg,baseball glove,0.83,317,91,365,138
+000000001730.jpg,sports ball,0.46,275,93,290,105
+000000455958.jpg,umbrella,0.73,9,81,143,148
+000000455958.jpg,umbrella,0.65,393,41,558,168
+000000455958.jpg,person,0.64,236,129,344,352
+000000455958.jpg,person,0.55,461,132,588,340
+000000455958.jpg,umbrella,0.55,164,66,310,171
+000000455958.jpg,person,0.46,75,144,167,348
+000000455958.jpg,umbrella,0.40,339,253,430,338
+faces.jpg,person,0.87,1186,63,1601,467
+faces.jpg,person,0.87,795,60,1199,471
+faces.jpg,person,0.82,786,867,1164,1266
+faces.jpg,person,0.81,447,61,749,468
+faces.jpg,person,0.80,436,472,778,870
+faces.jpg,person,0.79,1196,472,1589,872
+faces.jpg,person,0.79,789,463,1198,869
+faces.jpg,person,0.78,396,865,807,1269
+faces.jpg,person,0.77,22,59,402,470
+faces.jpg,person,0.74,1208,867,1563,1263
+faces.jpg,person,0.73,1592,461,1993,868
+faces.jpg,person,0.73,1665,866,1971,1268
+faces.jpg,person,0.71,5,453,329,871
+faces.jpg,person,0.64,25,864,368,1263
+faces.jpg,person,0.54,1646,61,1977,470
+neutral26.jpg,surfboard,0.47,370,0,730,1068
+neutral26.jpg,skateboard,0.46,370,0,730,1068
+neutral26.jpg,surfboard,0.44,16,2,318,1080
+sexy15.jpg,person,0.91,37,2,678,1021
+sexy30.jpg,person,0.68,8,7,285,400

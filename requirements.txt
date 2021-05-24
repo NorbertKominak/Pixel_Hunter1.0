@@ -12,4 +12,8 @@ hydra-core
 scikit-learn
 albumentations
 omegaconf
+azure-cognitiveservices-vision-computervision
+pillow
+boto3
+google-cloud-vision
 -e git+https://github.com/GantMan/nsfw_model#egg=nsfw_detector
