@@ -2,7 +2,7 @@
 
 Image analysis using combination of freely available pre-trained neural networks with Google Cloud Vision, Amazon Rekognition and Microsoft Computer Vision APIs. 
 
-Input images are loaded from the directory specified by --input_dir argument. All outputs are stored in the directory specified by --output_dir.Whether APIs are allowed to run or not is defined by --allow_api argument. Only selected images are sent for further analysis to APIs. The selection is determined by each neural network`s outputs.
+Input images are loaded from the directory specified by --input_dir argument. All outputs are stored in the existing directory specified by --output_dir.Whether APIs are allowed to run or not is defined by --allow_api argument. Only selected images are sent for further analysis to APIs. The selection is determined by each neural network`s outputs.
 
 ## Installation
 
@@ -10,12 +10,26 @@ Python 3.7 or higher is required.
 
 1. Download pre-trained models [here](https://drive.google.com/file/d/1DVcpRyNnuh-dS7y3gqniy0od9NZmkvy0/view?usp=sharing)
 . Extract them into bakloska folder.
-2. Create virtual environment (Windows)
+2. Create virtual environment, if you are stuck check [this](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
+
+Windows:
 ```bash
-python -m venv path_to_bakloska\venv
-path_to_bakloska\venv\Scripts\activate
+# Set up the environment env in bakloska folder
+python -m venv venv
+# Activate created environment
+venv\Scripts\activate
 
 ```
+
+Linux and macOS:
+```bash
+# Set up the environment env in bakloska folder
+python3 -m venv venv
+# Activate created environment
+source venv/bin/activate
+
+```
+
 3. Install requirements.
 ```bash
 pip install cmake
@@ -58,8 +72,6 @@ python run.py --input_dir=my_dir --output_dir=out_dir --allow_api=True
 # to outputs
 python run.py
 ```  
-
-Unfortunately warnings with regards to custom gradient could not be silenced. At the moment, the only workaround how to avoid them is to install less stable TensorFlow version `pip install tf-nightly` instead of `tensorflow`. It should be fixed in the future tf 2.5.0 stable release :).
 
 ## Sources
 [NSFW model](https://github.com/GantMan/nsfw_model)  
