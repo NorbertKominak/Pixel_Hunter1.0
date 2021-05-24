@@ -73,6 +73,8 @@ python run.py --input_dir=my_dir --output_dir=out_dir --allow_api=True
 python run.py
 ```  
 
+[__Warning__]s with regards to custom gradient have no effect on object detection model\`s inference. It is only warning that custom gradients are not supported by TF and training this model would lead to an Error. More info [here](https://github.com/tensorflow/tensorflow/issues/44161)
+
 ## Sources
 [NSFW model](https://github.com/GantMan/nsfw_model)  
 [Age_gender model](https://github.com/yu4u/age-gender-estimation)  
