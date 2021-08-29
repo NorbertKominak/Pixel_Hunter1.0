@@ -1,8 +1,8 @@
-# Bakloska
+# Pixel Hunter 1.0
 
 Image analysis using combination of freely available pre-trained neural networks with Google Cloud Vision, Amazon Rekognition and Microsoft Computer Vision APIs. 
 
-Input images are loaded from the directory specified by --input_dir argument. All outputs are stored in the existing directory specified by --output_dir.Whether APIs are allowed to run or not is defined by --allow_api argument. Only selected images are sent for further analysis to APIs. The selection is determined by each neural network`s outputs.
+Input images are loaded from the directory specified by --input_dir argument. All outputs are stored in the existing directory specified by --output_dir.Whether APIs are allowed to run or not is defined by --allow_api argument. Only selected images are sent for further analysis to APIs. The selection is determined by each neural network`s outputs. This code is part of my bachelor [thesis](https://is.muni.cz/th/o7q0i/?lang=en)
 
 ## Installation
 
